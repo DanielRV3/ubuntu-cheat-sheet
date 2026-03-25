@@ -10,6 +10,13 @@ Basado en Ubuntu 24.04
 - Python 3.9 o superior
 
 ## Instalación
+
+### Clonar repositorio
+
+```bash
+git clone https://github.com/DanielRV3/ubuntu-cheat-sheet.git
+```
+
 ### Entorno Virtual
 
 Crear y activar un entorno virtual de python para evitar instalar dependencias globalmente:
@@ -31,12 +38,6 @@ pip install -r requirements.txt
 ```
 
 > **Nota:** El entorno virtual debe ser activado cada que corre la aplicación
-
-### Clonar repositorio
-
-```bash
-git clone https://github.com/DanielRV3/ubuntu-cheat-sheet.git
-```
 
 ## Uso
 * Dirigirse a la carpeta donde fue clonado el repositorio
