@@ -1,6 +1,6 @@
 # Cheat Sheet Linux
 
-Este repositorio conteiente una cheat sheet de comandos de linux vistos en el curso de Proyecto Integrador y Comprensivo II.
+Este repositorio contiene una cheat sheet de comandos de linux vistos en el curso de Proyecto Integrador y Comprensivo II.
 
 Basado en Ubuntu 24.04
 
