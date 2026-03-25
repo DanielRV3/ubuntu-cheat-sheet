@@ -1,0 +1,264 @@
+{
+  "General": [
+    { "cmd": "clear",     "desc": "Limpiar la terminal" },
+    { "cmd": "history",   "desc": "Ver historial de comandos" },
+    { "cmd": "!#",        "desc": "Ejecutar comando #  del historial" },
+    { "cmd": "exit",      "desc": "Cerrar la sesion de la terminal" },
+    { "cmd": "--version", "desc": "Mostrar version del programa" },
+    { "cmd": "--help",    "desc": "Mostrar ayuda del programa" },
+    { "cmd": "echo",      "desc": "Imprimir texto en pantalla" },
+    { "cmd": "pwd",       "desc": "Mostrar directorio actual" },
+    { "cmd": "su [usuario]", "desc": "Cambiar de usuario" },
+    { "cmd": "./",        "desc": "Ejecutar un binario en el directorio actual" }
+  ],
+
+  "Archivos y Directorios": [
+    {
+      "cmd": "ls",
+      "desc": "Listar contenido del directorio",
+      "flags": [
+        { "flag": "-l",        "desc": "Formato largo con permisos y detalles" },
+        { "flag": "-a",        "desc": "Mostrar archivos ocultos" },
+        { "flag": "-h",        "desc": "Tamanios legibles (KB, MB, GB)" },
+        { "flag": "-R",        "desc": "Listar recursivamente" },
+        { "flag": "-S",        "desc": "Ordenar por tamanio" },
+        { "flag": "-t",        "desc": "Ordenar por fecha de modificacion" },
+        { "flag": "[patron]",  "desc": "Filtrar por patron de busqueda" }
+      ]
+    },
+    { "cmd": "touch",  "desc": "Crear archivo vacio o actualizar fecha de modificacion" },
+    { "cmd": "cat",    "desc": "Mostrar contenido de un archivo" },
+    { "cmd": "file",   "desc": "Detectar tipo de archivo" },
+    { "cmd": "cp",     "desc": "Copiar archivos o directorios" },
+    { "cmd": "mv",     "desc": "Mover o renombrar archivos" },
+    { "cmd": "rm",     "desc": "Eliminar archivos o directorios" },
+    { "cmd": "mkdir",  "desc": "Crear directorio" },
+    { "cmd": "rmdir",  "desc": "Eliminar directorio vacio" },
+    {
+      "cmd": "cd",
+      "desc": "Cambiar directorio",
+      "flags": [
+        { "flag": "/",          "desc": "Ir al directorio raiz" },
+        { "flag": "~",          "desc": "Ir al directorio home" },
+        { "flag": ".",          "desc": "Directorio actual" },
+        { "flag": "..",         "desc": "Subir un nivel" },
+        { "flag": "carpeta",    "desc": "Ir a carpeta relativa o ruta absoluta" }
+      ]
+    },
+    {
+      "cmd": "locate",
+      "desc": "Buscar archivos en el sistema (apt install plocate)",
+      "installable": true
+    },
+    {"cmd": "ranger", "desc": "Explorador de archivos visual en la terminal", "installable": true },
+    { "cmd": ".file","desc": "Archivo oculto (prefijo punto)" }
+  ],
+
+  "Comodines": [
+    { "cmd": "?",     "desc": "Comodin para exactamente un caracter" },
+    { "cmd": "*",     "desc": "Comodin que representa cualquier cadena" },
+    { "cmd": "[ - ]", "desc": "Comodin que representa un rango de caracteres (ej. [a-z])" }
+  ],
+
+  "Editores": [
+    { "cmd": "nano", "desc": "Editor de texto simple en la terminal" },
+    { "cmd": "vim", "desc": "Editor de texto en terminal centrado en atajos de teclado" },
+    { "cmd": "nvim", "desc": "Editor de texto en terminal basado en Vim con soporte de plugins avanzados", "installable": true }
+  ],
+
+  "Compilacion": [
+    {
+      "cmd": "gcc",
+      "desc": "Compilar codigo C",
+      "flags": [
+        { "flag": "-o", "desc": "Especificar nombre del ejecutable de salida" }
+      ]
+    },
+    {
+      "cmd": "g++",
+      "desc": "Compilar codigo C++",
+      "flags": [
+        { "flag": "-o", "desc": "Especificar nombre del ejecutable de salida" }
+      ]
+    },
+    {
+      "cmd": "javac",
+      "desc": "Compilar codigo Java (sudo apt install default-jdk)",
+      "installable": true
+    },
+    { "cmd": "java", "desc": "Ejecutar programa Java compilado" }
+  ],
+
+  "Documentacion": [
+    { "cmd": "man",     "desc": "Manual del comando (paginado)" },
+    { "cmd": "info",    "desc": "Documentacion detallada del comando" },
+    { "cmd": "whereis", "desc": "Localizar binario, fuente y manual de un comando" }
+  ],
+
+  "Compresion": [
+    {
+      "cmd": "gzip",
+      "desc": "Comprimir archivos en formato .gz",
+      "flags": [
+        { "flag": "-l", "desc": "Listar info del archivo comprimido" },
+        { "flag": "-d", "desc": "Descomprimir (equivalente a gunzip)" }
+      ]
+    },
+    { "cmd": "gunzip", "desc": "Descomprimir archivos .gz" },
+    { "cmd": "zip",    "desc": "Comprimir archivos en formato .zip" },
+    {
+      "cmd": "unzip",
+      "desc": "Descomprimir archivos .zip",
+      "flags": [
+        { "flag": "-l", "desc": "Listar contenido sin descomprimir" }
+      ]
+    },
+    {
+      "cmd": "tar",
+      "desc": "Archivar y comprimir conjuntos de archivos",
+      "flags": [
+        { "flag": "-c",       "desc": "Crear archivo" },
+        { "flag": "-f",       "desc": "Especificar nombre del archivo" },
+        { "flag": "-t",       "desc": "Listar contenido del archivo" },
+        { "flag": "-v",       "desc": "Modo verbose (mostrar archivos)" },
+        { "flag": "-x",       "desc": "Extraer contenido" },
+        { "flag": "-z",       "desc": "Comprimir/descomprimir con gzip" },
+        { "flag": "-j",       "desc": "Comprimir/descomprimir con bzip2" },
+        { "flag": "--append", "desc": "Anadir archivos al archivo existente" },
+        { "flag": "--delete", "desc": "Eliminar archivos del archivo" }
+      ]
+    }
+  ],
+
+  "Info del Sistema": [
+    {
+      "cmd": "uname",
+      "desc": "Informacion del kernel y sistema",
+      "flags": [
+        { "flag": "-a", "desc": "Mostrar toda la informacion disponible" }
+      ]
+    },
+    { "cmd": "neofetch", "desc": "Resumen visual del sistema con logo de la distro", "installable": true },
+    { "cmd": "lscpu",    "desc": "Informacion detallada del procesador" },
+    { "cmd": "lspci",    "desc": "Listar dispositivos PCI" },
+    { "cmd": "lsusb",    "desc": "Listar dispositivos USB conectados" },
+    {
+      "cmd": "free",
+      "desc": "Mostrar uso de memoria RAM y swap",
+      "flags": [
+        { "flag": "-h",   "desc": "Formato legible para humanos" },
+        { "flag": "-t",   "desc": "Mostrar fila de totales" },
+        { "flag": "-w",   "desc": "Separar columnas de buffers y cache" },
+        { "flag": "-s #", "desc": "Actualizar cada # segundos" },
+        { "flag": "-c #", "desc": "Mostrar # veces y salir" },
+        { "flag": "--si", "desc": "Usar potencias de 1000 en vez de 1024" }
+      ]
+    }
+  ],
+
+  "Procesos": [
+    {
+      "cmd": "ps",
+      "desc": "Listar procesos activos",
+      "flags": [
+        { "flag": "aux", "desc": "Todos los procesos con usuario, CPU y memoria" }
+      ]
+    },
+    { "cmd": "pstree",  "desc": "Ver procesos en forma de arbol" },
+    { "cmd": "top",     "desc": "Monitor de procesos en tiempo real" },
+    { "cmd": "htop",    "desc": "Monitor de procesos interactivo y visual" },
+    { "cmd": "glances", "desc": "Monitor del sistema con vista amplia", "installable": true },
+    {"cmd": "bashtop", "desc": "Monitor de recursos visual estilo retro", "installable": true}
+  ],
+
+  "Disco": [
+    {
+      "cmd": "fdisk",
+      "desc": "Gestionar particiones del disco",
+      "flags": [
+        { "flag": "-l", "desc": "Listar todas las particiones del sistema" }
+      ]
+    },
+    { "cmd": "cfdisk", "desc": "Gestionar particiones con interfaz visual" },
+    { "cmd": "df",     "desc": "Mostrar espacio disponible en particiones" },
+    {"cmd": "duf", "desc": "Alternativa moderna y visual a df", "installable": true},
+    {"cmd": "ncdu", "desc": "Explorador de uso de disco interactivo", "installable": true}
+  ],
+
+  "Logs": [
+    { "cmd": "journalctl", "desc": "Ver logs del sistema (systemd)" },
+    {
+      "cmd": "dmesg",
+      "desc": "Mensajes del kernel del sistema",
+      "flags": [
+        { "flag": "-H", "desc": "Formato legible con paginacion automatica" },
+        { "flag": "-T", "desc": "Timestamps en formato de fecha y hora" }
+      ]
+    }
+  ],
+
+  "Red": [
+		{"cmd": "ifconfig", "desc": "Ver y configurar interfaces de red (legacy)"},
+		{
+			"cmd": "ip address",
+			"desc": "Ver interfaces y direcciones de red",
+			"flags": [{"flag": "-c", "desc": "Salida con colores"}]
+		},
+		{
+			"cmd": "ping",
+			"desc": "Probar conectividad con un host",
+			"flags": [{"flag": "-c #", "desc": "Enviar # paquetes y detenerse"}]
+		},
+		{"cmd": "route", "desc": "Ver o modificar tabla de enrutamiento"},
+		{
+			"cmd": "tracepath",
+			"desc": "Trazar la ruta de paquetes hasta el destino. No requiere acceso a root (sudo). Utiliza UDP"
+		},
+		{
+			"cmd": "netstat",
+			"desc": "Estadisticas de red y conexiones activas",
+			"flags": [
+				{"flag": "-r", "desc": "Mostrar tabla de enrutamiento"},
+				{"flag": "-i", "desc": "Mostrar estadisticas de interfaces"}
+			]
+		},
+		{
+			"cmd": "lsof",
+			"desc": "Listar archivos abiertos por procesos",
+			"flags": [{"flag": "-i", "desc": "Mostrar solo conexiones de red"}]
+		},
+		{
+			"cmd": "traceroute",
+			"desc": "Trazar la ruta de paquetes hasta el destino. Puede requerir acceso a root. Maneja protocolos TCP, UDP y ICMP",
+      "installable": true
+		},
+		{"cmd": "iftop", "desc": "Monitor de trafico de red por interfaz", "installable": true},
+		{"cmd": "nethogs", "desc": "Monitor de trafico agrupado por proceso", "installable": true},
+		{"cmd": "bmon", "desc": "Monitor de ancho de banda visual", "installable": true},
+		{
+			"cmd": "speedometer",
+			"desc": "Grafica de velocidad de red en la terminal",
+			"installable": true
+		},
+		{
+			"cmd": "termshark",
+			"desc": "Interfaz TUI para captura de paquetes (Wireshark)",
+			"installable": true
+		}
+	],
+
+  "Utilidades y Juegos": [
+    {"cmd": "cal", "desc": "Mostrar calendario del mes actual", "installable": true },
+    {"cmd": "ipcalc", "desc": "Calculadora de subredes IP", "installable": true },
+    {"cmd": "sl", "desc": "Tren animado (Easter egg)", "installable": true },
+    {"cmd": "cowsay", "desc": "Vaca que dice un mensaje", "installable": true },
+    {"cmd": "cmatrix", "desc": "Lluvia de caracteres estilo Matrix", "installable": true },
+    {"cmd": "fortune", "desc": "Mostrar una frase aleatoria", "installable": true },
+    {"cmd": "moon-buggy", "desc": "Juego de saltar obstaculos en la luna", "installable": true },
+    {"cmd": "nudoku", "desc": "Sudoku en la terminal", "installable": true },
+    {"cmd": "bastet", "desc": "Tetris malvado (elige las peores piezas)", "installable": true },
+    {"cmd": "nsnake", "desc": "Snake clasico en la terminal", "installable": true },
+    {"cmd": "ninvaders", "desc": "Space Invaders en la terminal", "installable": true },
+    {"cmd": "pacman4console", "desc": "Pac-Man en la terminal", "installable": true }
+  ]
+}

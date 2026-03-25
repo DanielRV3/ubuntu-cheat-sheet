@@ -1,0 +1,74 @@
+/*
+ * Variables de color disponibles:
+ *   bg        #1a1b26  fondo principal
+ *   bg-alt    #24283b  fondo secundario (tabs, footer)
+ *   border    #3b4261  color de bordes
+ *   fg        #a9b1d6  texto normal
+ *   fg-dim    #565f89  texto atenuado
+ *   blue      #7aa2f7  tab activo y badge de comando
+ *   cyan      #7dcfff  titulo de categoria
+ */
+
+Screen {
+    background: #1a1b26;
+    color: #a9b1d6;
+    padding: 0 0 1 0;
+}
+
+/* ── Barra de tabs ── */
+#tabs {
+    height: 3;
+    background: #24283b;
+    border-bottom: solid #3b4261;
+    padding: 0 1;
+    align: left middle;
+}
+
+.tab {
+    height: 3;
+    padding: 0 2;
+    color: #565f89;
+    content-align: center middle;
+}
+
+.tab.active {
+    color: #7aa2f7;
+    text-style: bold;
+    border-bottom: heavy #7aa2f7;
+}
+
+/* ── Área de contenido ── */
+#content {
+    padding: 1 3;
+    background: #1a1b26;
+}
+
+#category-title {
+    color: #7dcfff;
+    text-style: bold;
+    height: 3;
+    width: 100%;
+    padding: 0 0 1 0;
+    border-bottom: solid #3b4261;
+    content-align: left middle;
+}
+
+#cmd-list {
+    height: 1fr;
+    overflow-y: auto;
+}
+
+/* ── Filas de comandos ── */
+CommandRow {
+    height: 1;
+    margin-top: 1;
+}
+
+/* ── Footer ── */
+#footer {
+    height: 1;
+    background: #24283b;
+    border-top: solid #3b4261;
+    padding: 0;
+    dock: bottom;
+}
